@@ -40,5 +40,20 @@ class Solution:
         if row:
             for j in range(m):
                 matrix[0][j]=0
-     
+     ****************************************approch 2****************************************
+    
+     r=len(matrix)
+        c=len(matrix[0])
+        row=[True]*r
+        col=[True]*c
+        for i in range(r):
+            for j in range(c):
+                if(matrix[i][j]==0):
+                    row[i]=False
+                    col[j]=False
+        for i in range(r):
+            for j in range(c):
+                if(row[i]==False or col[j]==False):
+                    matrix[i][j]=0
+        
         
